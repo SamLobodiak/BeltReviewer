@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Add Book Review</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <form class="book_review" action="index.html" method="post">
+        {% csrf_token %}
+        <a href="/books">Home</a>
+        <a href="/logout">logout</a>
+        <h3>Add book title and a review</h3>
+        <p>Book Title: </p>
+        <textarea name="title" rows="1" cols="30"></textarea>
+        <br>
+        <br>
+        <h5>Author:
+        </h5>
+        <p>choose from a list:
+          <select>
+          <option value="Steven King">Steven King</option>
+          <option value="JK Rowling">JK Rowling</option>
+          <option value="John Grishom">John Grishom</option>
+          <option value="Ernest Hemingway">Ernest Hemingway</option>
+          </select>
+        </p>
+        <p>Or, add new author</p>
+        <textarea name="add_new_author" rows="1" cols="30"></textarea>
+        <p>Review</p>
+        <textarea name="review" rows="4" cols="30"></textarea>
+        <p>Rating:
+
+        </p>
+        <input type="submit" name="submit_review" value="Add book review">
+
+      </form>
+
+      <br>
+
+
+    </div>
+  </body>
+</html>
